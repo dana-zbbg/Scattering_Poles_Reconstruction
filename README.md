@@ -28,11 +28,35 @@ as well as auxiliary codes used to find the zeros of the derivative of the Hanke
         -We use Single Layer Potential and finite elements to find the solution to each interior problem   
         -(uses from Gypsilab : femGreenKernel, integral, mesh tools)  
   
-### LSM_F.m :
+### LSM_F.m :  
 	-Definition of delta_z (parameter for points z taken at distance delta_z around the domain D)  
 	-Inversion of the interior scattering operator matrix using SVD and   
  	compute the norm of the inverse of the interior scattering operator
 	-(applied to the incident Fourier coefficients of the 2D fundamental solution of Hemholtz equation)
+
+## -----------------------------Shape_Variation--------------------------  
+### shape_variation_kite :   
+	code to vary shape parameter and compute pole   
+	(must provide a starting point corresponding to a poles)  
+   
+### shape_variation4 :   
+	data corresponding to the run of shape_variation_kite (SavingPoles = poles for a=linspace(0.7,1.2,15))  
+  
+### kite_shapes :   
+	draw the shapes of the kite for various parameter  
+	compute the area  
+   
+### figure_shape_var :  
+	make figure from data  
+   
+### ---------------------------Impedance_Variation-------------------------  
+### impedance_variation_kite :  
+	code varying impedance and computing the corresponding poles  
+	(need a starting point at a pole)  
+### impedance_variation_savings :  
+	data corresponding to a run of impedance_variation_kite  
+### figure_impedance_var :  
+	make figure from data  
   
 ## -----------------------------Cauchy_method_Hankel_functions----------------------------------------    
 ### Cauchy.m :   
