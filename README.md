@@ -7,7 +7,7 @@ as well as auxiliary codes used to find the zeros of the derivative of the Hanke
 
 --------------------------Main---------------------------------------------
 - main_sc_poles.m :   
-	&nbsp main programm, produces a array/plot of 1 over the norm of g obtained by inverting the interior scattering operator. It shows peaks at the values of the scattering poles.  
+$~$ main programm, produces a array/plot of 1 over the norm of g obtained by inverting the interior scattering operator. It shows peaks at the values of the scattering poles.  
         *set up the ranges of real and imaginary parts of k (values of k to be tested)  
 	*set up of the geometry (shape of the obstacle)  
 	*set up of boundary condition (Dirichlet or Impedance)  
