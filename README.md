@@ -2,13 +2,13 @@
 Numerical reconstruction of scattering poles for the Helmholtz equation in 2 dimensions for Dirichlet/Neumann/Impedance boundary conditions
 
 This code corresponds to the algorithm described in the article "An algorithm for computing scattering poles based on dual characterization to interior eigenvalues", Proceedings A, by Cakoni - Haddar - Zilberberg. 
-It consists of 4 Matlab files that rely on the use of Gypsilab : https://github.com/matthieuaussal/gypsilab
+The main algorithm consists of 4 Matlab files that rely on the use of Gypsilab : https://github.com/matthieuaussal/gypsilab
 as well as auxiliary codes used to find the zeros of the derivative of the Hankel function. 
 
 ## --------------------------Main---------------------------------------------   
 ### main_sc_poles.m :   
-	-main programm, produces a array/plot of 1 over the norm of g obtained by  
- 	inverting the interior scattering operator. It shows peaks at the values of the scattering poles.  
+	-main programm, produces a array/plot of 1 over the norm of g obtained by inverting the  
+ 	interior scattering operator. It shows peaks at the values of the scattering poles.  
 	-set up the ranges of real and imaginary parts of k (values of k to be tested)  
 	-set up of the geometry (shape of the obstacle)  
 	-set up of boundary condition (Dirichlet or Impedance)  
@@ -18,21 +18,25 @@ as well as auxiliary codes used to find the zeros of the derivative of the Hanke
 ### MatrixF.m :  
 	-return the matrix of the Fourier transform of the interior scattering operator  
  	for a Dirichlet boundary condition by solving the interior problem.  
-        -We use Single Layer Potential and finite elements to find the solution to each interior problem   
+        -We use Single Layer Potential and finite elements to find the solution to each   
+	interior problem   
         -(uses from Gypsilab : femGreenKernel, integral, mesh tools)  
   
 ### MatrixF_impedance.m :  
 	-Definition of the impedance function  
 	-return the matrix of the Fourier transform of interior scattering operator   
  	for an impedance boundary condition.  
-        -We use Single Layer Potential and finite elements to find the solution to each interior problem   
+        -We use Single Layer Potential and finite elements to find the solution to each   
+	interior problem   
         -(uses from Gypsilab : femGreenKernel, integral, mesh tools)  
   
 ### LSM_F.m :  
-	-Definition of delta_z (parameter for points z taken at distance delta_z around the domain D)  
+	-Definition of delta_z (parameter for points z taken at distance delta_z   
+ 	around the domain D)  
 	-Inversion of the interior scattering operator matrix using SVD and   
  	compute the norm of the inverse of the interior scattering operator
-	-(applied to the incident Fourier coefficients of the 2D fundamental solution of Hemholtz equation)
+	(applied to the incident Fourier coefficients of the 2D fundamental solution of   
+ 	Hemholtz equation)
 
 ## -----------------------------Shape_Variation--------------------------  
 ### shape_variation_kite :   
@@ -40,7 +44,8 @@ as well as auxiliary codes used to find the zeros of the derivative of the Hanke
 	(must provide a starting point corresponding to a poles)  
    
 ### shape_variation4 :   
-	data corresponding to the run of shape_variation_kite (SavingPoles = poles for a=linspace(0.7,1.2,15))  
+	data corresponding to the run of shape_variation_kite   
+  	(SavingPoles = poles for a=linspace(0.7,1.2,15))  
   
 ### kite_shapes :   
 	draw the shapes of the kite for various parameter  
