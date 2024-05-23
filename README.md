@@ -37,7 +37,7 @@ We then provide codes showing the evolution of one pole when the shape of the do
 	-Inversion of the interior scattering operator matrix using SVD and   
  	compute the norm of the inverse of the interior scattering operator
 	(applied to the incident Fourier coefficients of the 2D fundamental solution of   
- 	Hemholtz equation)
+ 	Hemholtz equation phi(.,z) for some points z that are delta_z far away from D)
 
 ## -----------------------------Shape_Variation--------------------------  
 ### shape_variation_kite.m :   
