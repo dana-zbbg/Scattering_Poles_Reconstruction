@@ -3,7 +3,8 @@ Numerical reconstruction of scattering poles for the Helmholtz equation in 2 dim
 
 This code corresponds to the algorithm described in the article "An algorithm for computing scattering poles based on dual characterization to interior eigenvalues", Proceedings A, by Cakoni - Haddar - Zilberberg. 
 The main algorithm consists of 4 Matlab files that rely on the use of Gypsilab : https://github.com/matthieuaussal/gypsilab
-as well as auxiliary codes used to find the zeros of the derivative of the Hankel function. 
+as well as auxiliary codes used to find the zeros of the derivative of the Hankel function.  
+We then provide codes showing the evolution of one pole when the shape of the domain is changed (in case of a kite) and when the impedence parameter is changed. 
 
 ## --------------------------Main---------------------------------------------   
 ### main_sc_poles.m :   
@@ -39,29 +40,30 @@ as well as auxiliary codes used to find the zeros of the derivative of the Hanke
  	Hemholtz equation)
 
 ## -----------------------------Shape_Variation--------------------------  
-### shape_variation_kite :   
-	code to vary shape parameter and compute pole   
-	(must provide a starting point corresponding to a poles)  
+### shape_variation_kite.m :   
+	compute the value of a pole for different shapes of the kite
+ 	the shape of the kite can be modified using its parametrization  
+	(must provide a starting point corresponding to a pole)  
    
 ### shape_variation4 :   
-	data corresponding to the run of shape_variation_kite   
+	an example of data corresponding to the run of shape_variation_kite.m
   	(SavingPoles = poles for a=linspace(0.7,1.2,15))  
   
 ### kite_shapes :   
 	draw the shapes of the kite for various parameter  
-	compute the area  
+	and compute its area  
    
-### figure_shape_var :  
-	make figure from data  
+### figure_shape_var.m :  
+	makes a figure from the data obtained by running shape_variation_kite.m  
    
 ### ---------------------------Impedance_Variation-------------------------  
-### impedance_variation_kite :  
-	code varying impedance and computing the corresponding poles  
-	(need a starting point at a pole)  
+### impedance_variation_kite.m :  
+	computes the value of a pole for different impedence parameters  
+	(must provide a starting point corresponding to a pole)  
 ### impedance_variation_savings :  
-	data corresponding to a run of impedance_variation_kite  
+	an example of data corresponding to the run of impedance_variation_kite  
 ### figure_impedance_var :  
-	make figure from data  
+	make figure from data obtained by impedance_variation_kite.m 
   
 ## -----------------------------Cauchy_method_Hankel_functions----------------------------------------    
 ### Cauchy.m :   
