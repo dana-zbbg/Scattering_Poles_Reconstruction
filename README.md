@@ -2,9 +2,9 @@
 Numerical reconstruction of scattering poles for the Helmholtz equation in 2 dimensions for Dirichlet/Neumann/Impedance boundary conditions
 
 This code corresponds to the algorithm described in the article "An algorithm for computing scattering poles based on dual characterization to interior eigenvalues", Proceedings A, by Cakoni - Haddar - Zilberberg. 
-The main algorithm consists of 4 Matlab files that rely on the use of Gypsilab : https://github.com/matthieuaussal/gypsilab
-as well as auxiliary codes used to find the zeros of the derivative of the Hankel function.  
+The main algorithm consists of 4 Matlab files that rely on the use of Gypsilab : https://github.com/matthieuaussal/gypsilab  
 We then provide codes showing the evolution of one pole when the shape of the domain is changed (in case of a kite) and when the impedence parameter is changed. 
+We also give auxiliary codes used to find the zeros of the Hankel function of the first kind, which correspond to the poles of a Dirichlet problem for a disk.   
 
 ## --------------------------Main---------------------------------------------   
 ### main_sc_poles.m :   
