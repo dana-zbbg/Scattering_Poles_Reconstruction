@@ -18,7 +18,7 @@ We then provide codes showing the evolution of one pole when the shape of the do
   
 ### MatrixF.m :  
 	-return the matrix of the Fourier transform of the interior scattering operator  
- 	for a Dirichlet boundary condition by solving the interior problem.  
+ 	for a Dirichlet boundary condition by solving the interior problem   
         -We use Single Layer Potential and finite elements to find the solution to each   
 	interior problem   
         -(uses from Gypsilab : femGreenKernel, integral, mesh tools)  
@@ -26,7 +26,7 @@ We then provide codes showing the evolution of one pole when the shape of the do
 ### MatrixF_impedance.m :  
 	-Definition of the impedance function  
 	-return the matrix of the Fourier transform of interior scattering operator   
- 	for an impedance boundary condition.  
+ 	for an impedance boundary condition   
         -We use Single Layer Potential and finite elements to find the solution to each   
 	interior problem   
         -(uses from Gypsilab : femGreenKernel, integral, mesh tools)  
